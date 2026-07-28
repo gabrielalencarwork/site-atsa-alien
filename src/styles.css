@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  --color-atsa-light: #fafafa;
+  --color-atsa-green: #4d8139;
+  --color-atsa-dark: #05070a;
+  --color-atsa-accent: #c46747;
+  --color-atsa-gold: #d4af37;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-atsa-light text-atsa-dark antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Custom animations */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
